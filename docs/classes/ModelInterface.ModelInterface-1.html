@@ -1,0 +1,942 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ModelInterface | @thirdact/simple-mongoose-interface</title>
+	<meta name="description" content="Documentation for @thirdact/simple-mongoose-interface">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@thirdact/simple-mongoose-interface</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">@thirdact/simple-mongoose-interface</a>
+				</li>
+				<li>
+					<a href="../modules/ModelInterface.html">ModelInterface</a>
+				</li>
+				<li>
+					<a href="ModelInterface.ModelInterface-1.html">ModelInterface</a>
+				</li>
+			</ul>
+			<h1>Class ModelInterface&lt;T&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An interface on-top of a Mongoose model that can be used for CRUD operations</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ModelInterface</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter"><a href="ModelInterface.ModelInterface-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="ModelInterface.ModelInterface-1.html#model" class="tsd-kind-icon">model</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#options" class="tsd-kind-icon">options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#name" class="tsd-kind-icon">name</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#count" class="tsd-kind-icon">count</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#createQuery" class="tsd-kind-icon">create<wbr>Query</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#execute" class="tsd-kind-icon">execute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#findById" class="tsd-kind-icon">find<wbr>ById</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#findOne" class="tsd-kind-icon">find<wbr>One</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="ModelInterface.ModelInterface-1.html#forEach" class="tsd-kind-icon">for<wbr>Each</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#patch" class="tsd-kind-icon">patch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#toPojo" class="tsd-kind-icon">to<wbr>Pojo</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#wrapError" class="tsd-kind-icon">wrap<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="ModelInterface.ModelInterface-1.html#toPojo-1" class="tsd-kind-icon">to<wbr>Pojo</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Model<wbr>Interface&lt;T&gt;<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Model</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/ModelInterface.html#ModelInterfaceOptions" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ModelInterface.ModelInterface-1.html" class="tsd-signature-type" data-tsd-kind="Class">ModelInterface</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L344">src/ModelInterface.ts:344</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>model: <span class="tsd-signature-type">Model</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../modules/ModelInterface.html#ModelInterfaceOptions" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="ModelInterface.ModelInterface-1.html" class="tsd-signature-type" data-tsd-kind="Class">ModelInterface</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="model" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> model</h3>
+					<div class="tsd-signature tsd-kind-icon">model<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Model</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="options" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../modules/ModelInterface.html#ModelInterfaceOptions" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceOptions</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L351">src/ModelInterface.ts:351</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the name of the underlying Mongoose model</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="count" class="tsd-anchor"></a>
+					<h3>count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">count<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L520">src/ModelInterface.ts:520</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>find</code> then <code>count</code> based on the query  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query used in the <code>find</code> then <code>count</code> operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="create" class="tsd-anchor"></a>
+					<h3>create</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#IDType" class="tsd-signature-type" data-tsd-kind="Type alias">IDType</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L529">src/ModelInterface.ts:529</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>create</code> based on the fields  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fields: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#IDType" class="tsd-signature-type" data-tsd-kind="Type alias">IDType</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createQuery" class="tsd-anchor"></a>
+					<h3>create<wbr>Query</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Query<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L479">src/ModelInterface.ts:479</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a Mongoose query from the <code>Query</code> provided.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Original query</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L588">src/ModelInterface.ts:588</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes all documents matching the query provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query to match with</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="execute" class="tsd-anchor"></a>
+					<h3>execute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#ModelInterfaceRequest" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceRequest</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L379">src/ModelInterface.ts:379</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Executes a Mongoose Interface request, from the instructions
+									provided in the object passed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <a href="../modules/ModelInterface.html#ModelInterfaceRequest" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceRequest</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Mongoose request to execute</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="find" class="tsd-anchor"></a>
+					<h3>find</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">find<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L495">src/ModelInterface.ts:495</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>find</code> based on the query  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query used in the <code>find</code> operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="findById" class="tsd-anchor"></a>
+					<h3>find<wbr>ById</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#IDType" class="tsd-signature-type" data-tsd-kind="Type alias">IDType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L512">src/ModelInterface.ts:512</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>findById</code> based on the query  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <a href="../modules/ModelInterface.html#IDType" class="tsd-signature-type" data-tsd-kind="Type alias">IDType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="findOne" class="tsd-anchor"></a>
+					<h3>find<wbr>One</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>One<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L504">src/ModelInterface.ts:504</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>findOne</code> based on the query  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query used in the <code>findOne</code> operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="forEach" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> for<wbr>Each</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Each<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L556">src/ModelInterface.ts:556</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a function upon each object returned by the query</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query to use</p>
+									</div>
+								</li>
+								<li>
+									<h5>fn: <span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Function to call for each object</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>doc: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="patch" class="tsd-anchor"></a>
+					<h3>patch</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">patch<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, patches<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#JSONPatch" class="tsd-signature-type" data-tsd-kind="Type alias">JSONPatch</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceUpdateResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceUpdateResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L569">src/ModelInterface.ts:569</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a series of JSON patches on all objects matched by the query</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query to match with</p>
+									</div>
+								</li>
+								<li>
+									<h5>patches: <a href="../modules/ModelInterface.html#JSONPatch" class="tsd-signature-type" data-tsd-kind="Type alias">JSONPatch</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Patches to apply</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceUpdateResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceUpdateResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toPojo" class="tsd-anchor"></a>
+					<h3>to<wbr>Pojo</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Pojo<span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ToPojoOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L471">src/ModelInterface.ts:471</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to return a plain old javascript object (POJO) of the input provided.
+										Will return  <code>null</code> if <code>null</code> or <code>undefined</code> or passed as input,
+										the input itself if the input isn&#39;t an object, then will attempt to call
+									<code>toJSON</code> and <code>toObject</code> on the object (in that order).</p>
+								</div>
+								<p>If <code>toJSON</code> and <code>toObject</code> does not exist will return the result of <code>lodash</code>&#39;s
+								<code>_.cloneDeep</code> on the input.</p>
+								<p>If an <code>Array</code> is provided, will run itself recursively against all objects in the input array.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>doc: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Document to convert</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">ToPojoOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, upsert<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceUpdateResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceUpdateResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L539">src/ModelInterface.ts:539</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs a Mongoose <code>update</code> based on the query and fields  provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query used in the <code>update</code> operation</p>
+									</div>
+								</li>
+								<li>
+									<h5>fields: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Query used in the <code>update</code> operation</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> upsert: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/ModelInterface.html#ModelInterfaceUpdateResponse" class="tsd-signature-type" data-tsd-kind="Type alias">ModelInterfaceUpdateResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="wrapError" class="tsd-anchor"></a>
+					<h3>wrap<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wrap<wbr>Error<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L359">src/ModelInterface.ts:359</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a <code>ModelInterfaceError</code> from an <code>Error</code> or existing <code>ModelInterfaceError</code>,
+										if an <code>Error</code> is passed, a <code>ModelInterfaceError</code> is returned  with the error passed
+									as <code>innerError</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>err: <a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Error to wrap</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+					<a name="toPojo-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Pojo</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Pojo&lt;T&gt;<span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ToPojoOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EtomonUSA/encode-tools/blob/b3e42af/src/ModelInterface.ts#L453">src/ModelInterface.ts:453</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to return a plain old javascript object (POJO) of the input provided.
+										Will return  <code>null</code> if <code>null</code> or <code>undefined</code> or passed as input,
+										the input itself if the input isn&#39;t an object, then will attempt to call
+									<code>toJSON</code> and <code>toObject</code> on the object (in that order).</p>
+								</div>
+								<p>If <code>toJSON</code> and <code>toObject</code> does not exist will return the result of <code>lodash</code>&#39;s
+								<code>_.cloneDeep</code> on the input.</p>
+								<p>If an <code>Array</code> is provided, will run itself recursively against all objects in the input array.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>doc: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Document to convert</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">ToPojoOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/ModelInterface.html">Model<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/RESTInterfaceHandler.html">RESTInterface<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/RESTInterfaceMiddleware.html">RESTInterface<wbr>Middleware</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/RPCInterface.html">RPCInterface</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/index.html">index</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/ModelInterface.JSONPatchOp.html" class="tsd-kind-icon">JSONPatch<wbr>Op</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/ModelInterface.ModelInterfaceRequestMethods.html" class="tsd-kind-icon">Model<wbr>Interface<wbr>Request<wbr>Methods</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="ModelInterface.InvalidMethodError.html" class="tsd-kind-icon">Invalid<wbr>Method<wbr>Error</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="ModelInterface.ModelInterface-1.html" class="tsd-kind-icon">Model<wbr>Interface</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="ModelInterface.ModelInterface-1.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="ModelInterface.ModelInterface-1.html#model" class="tsd-kind-icon">model</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#count" class="tsd-kind-icon">count</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#create" class="tsd-kind-icon">create</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#createQuery" class="tsd-kind-icon">create<wbr>Query</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#delete" class="tsd-kind-icon">delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#execute" class="tsd-kind-icon">execute</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#find" class="tsd-kind-icon">find</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#findById" class="tsd-kind-icon">find<wbr>ById</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#findOne" class="tsd-kind-icon">find<wbr>One</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="ModelInterface.ModelInterface-1.html#forEach" class="tsd-kind-icon">for<wbr>Each</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#patch" class="tsd-kind-icon">patch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#toPojo" class="tsd-kind-icon">to<wbr>Pojo</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#update" class="tsd-kind-icon">update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ModelInterface.ModelInterface-1.html#wrapError" class="tsd-kind-icon">wrap<wbr>Error</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+								<a href="ModelInterface.ModelInterface-1.html#toPojo-1" class="tsd-kind-icon">to<wbr>Pojo</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="ModelInterface.SimpleModelInterface.html" class="tsd-kind-icon">Simple<wbr>Model<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/ModelInterface.JSONPatchBase.html" class="tsd-kind-icon">JSONPatch<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-kind-icon">Model<wbr>Interface<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/ModelInterface.ModelInterfaceRequestBodyOptions.html" class="tsd-kind-icon">Model<wbr>Interface<wbr>Request<wbr>Body<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/ModelInterface.QueryBase.html" class="tsd-kind-icon">Query<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/ModelInterface.QueryFieldSelection.html" class="tsd-kind-icon">Query<wbr>Field<wbr>Selection</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#CreateModelInterfaceRequestBody" class="tsd-kind-icon">Create<wbr>Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#FindByIdModelInterfaceRequestBody" class="tsd-kind-icon">Find<wbr>ById<wbr>Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#IDType" class="tsd-kind-icon">IDType</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#JSONPatch" class="tsd-kind-icon">JSONPatch</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#ModelInterfaceOptions" class="tsd-kind-icon">Model<wbr>Interface<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#ModelInterfaceRequest" class="tsd-kind-icon">Model<wbr>Interface<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#ModelInterfaceRequestBody" class="tsd-kind-icon">Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#ModelInterfaceResponse" class="tsd-kind-icon">Model<wbr>Interface<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#ModelInterfaceResponseCount" class="tsd-kind-icon">Model<wbr>Interface<wbr>Response<wbr>Count</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#ModelInterfaceResponseCreate" class="tsd-kind-icon">Model<wbr>Interface<wbr>Response<wbr>Create</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#ModelInterfaceResponseResult" class="tsd-kind-icon">Model<wbr>Interface<wbr>Response<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#ModelInterfaceResponseResults" class="tsd-kind-icon">Model<wbr>Interface<wbr>Response<wbr>Results</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#ModelInterfaceUpdateResponse" class="tsd-kind-icon">Model<wbr>Interface<wbr>Update<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#PatchModelInterfaceRequestBody" class="tsd-kind-icon">Patch<wbr>Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#Query" class="tsd-kind-icon">Query</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#QueryModelInterfaceRequestBody" class="tsd-kind-icon">Query<wbr>Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#QueryProjection" class="tsd-kind-icon">Query<wbr>Projection</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#QuerySort" class="tsd-kind-icon">Query<wbr>Sort</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#TextQuery" class="tsd-kind-icon">Text<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/ModelInterface.html#UpdateModelInterfaceRequestBody" class="tsd-kind-icon">Update<wbr>Model<wbr>Interface<wbr>Request<wbr>Body</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#DEFAULT_MODEL_INTERFACE_OPTIONS" class="tsd-kind-icon">DEFAULT_<wbr>MODEL_<wbr>INTERFACE_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#DEFAULT_SIMPLE_MODEL_INTERFACE_OPTIONS" class="tsd-kind-icon">DEFAULT_<wbr>SIMPLE_<wbr>MODEL_<wbr>INTERFACE_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/ModelInterface.html#IsModelInterfaceError" class="tsd-kind-icon">Is<wbr>Model<wbr>Interface<wbr>Error</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
