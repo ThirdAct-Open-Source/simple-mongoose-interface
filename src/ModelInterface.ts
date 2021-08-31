@@ -362,7 +362,7 @@ export class ModelInterface<T> {
     } else {
       return {
         message: err.message,
-        httpCode: 500,
+        httpCode: (err as any).httpCode || 500,
         innerError: err,
         stack: err.stack,
         isModelInterfaceError: IsModelInterfaceError
@@ -472,12 +472,20 @@ export class ModelInterface<T> {
     return ModelInterface.toPojo<T>(doc, options);
   }
 
+  protected ensureQuery(query: Query<T>): Query<T> {
+    query = _.cloneDeep(query || { query: {} });
+    query.query = query.query || {};
+
+    return query;
+  }
+
   /**
    * Constructs a Mongoose query from the `Query` provided.
    * @param query Original query
    */
   public createQuery(query: Query<T>) {
-    const q = this.model.find(query.query as any, query.project);
+    query = this.ensureQuery(query);
+    const q = query?.query?._id ? this.model.findById(query.query._id, query.project) : this.model.find(query.query as any, query.project);
 
     if (query.sort) q.sort(query.sort);
     if (query.skip) q.skip(query.skip);
@@ -493,8 +501,9 @@ export class ModelInterface<T> {
    * @param query Query used in the `find` operation
    */
   public async find(query: Query<T>): Promise<Document<T>[]> {
+    query = this.ensureQuery(query);
     const q = this.createQuery(query);
-    return (await q.exec()) as Document<T>[];
+    return [].concat((await q.exec())) as Document<T>[];
   }
 
   /**
@@ -502,6 +511,7 @@ export class ModelInterface<T> {
    * @param query Query used in the `findOne` operation
    */
   public async findOne(query: Query<T>): Promise<Document<T>|null> {
+    query = this.ensureQuery(query);
     return (await this.find(query))[0] as Document<T>;
   }
 
@@ -518,6 +528,7 @@ export class ModelInterface<T> {
    * @param query Query used in the `find` then `count` operation
    */
   public async count(query: Query<T>): Promise<number> {
+    query = this.ensureQuery(query);
     const q = this.createQuery(query);
     return q.count().exec();
   }
@@ -537,9 +548,22 @@ export class ModelInterface<T> {
    * @param  fields Query used in the `update` operation
    */
   public async update(query: Query<T>, fields: T, upsert?: boolean): Promise<ModelInterfaceUpdateResponse> {
-    const result = await this.model.updateMany(query.query as any, fields, {
-      upsert
-    }).exec();
+    query = this.ensureQuery(query);
+    if (query?.query?._id) {
+      const mod = await this.model.findById(query?.query?._id, { _id: 1 }).exec();
+      if (mod) {
+        for (let k in fields) {
+          (mod as any)[k] = fields[k];
+        }
+        await mod.save();
+        return { updated: 1, upserted: [] };
+      } else {
+        return { updated: 0, upserted: [] };
+      }
+    }
+      const result = await this.model.updateMany(query.query as any, fields, {
+        upsert
+      }).exec();
 
     return {
       updated: result.nModified,
@@ -554,6 +578,7 @@ export class ModelInterface<T> {
    * @protected
    */
   protected async forEach(query: Query<T>, fn: (doc: Document<T>) => Promise<void>): Promise<void> {
+    query = this.ensureQuery(query);
     let doc: Document<T>;
     const cur = this.createQuery(query).cursor();
     while (doc = await cur.next() as Document<T>) {
@@ -567,6 +592,7 @@ export class ModelInterface<T> {
    * @param patches Patches to apply
    */
   public async patch(query: Query<T>, patches: JSONPatch[]): Promise<ModelInterfaceUpdateResponse> {
+    query = this.ensureQuery(query);
     const upserted: IDType[] = [];
     let updated = 0;
     await this.forEach(query, async (doc) => {
@@ -586,6 +612,7 @@ export class ModelInterface<T> {
    * @param query Query to match with
    */
   public async delete(query: Query<T>): Promise<void> {
+    query = this.ensureQuery(query);
      await this.model.deleteMany(query.query as any);
   }
 }

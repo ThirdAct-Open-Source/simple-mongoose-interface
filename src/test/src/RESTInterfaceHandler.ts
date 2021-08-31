@@ -1,27 +1,24 @@
 import {assert} from 'chai';
 import {
   BindRandomSerialize,
-  GenerateRandomDefinition, GenerateRandomKeyValuePair,
-  GenerateRandomMongooseModel,
-  RandomSchemaInterface, RandomSerializationFormat, RandomSerialize
+  GenerateRandomDefinition,
+  GenerateRandomKeyValuePair,
+  GenerateRandomMongooseModel, makeChance,
+  RandomSchemaInterface,
+  RandomSerialize
 } from '../common/MongooseGenerator'
-import {Model, Mongoose, Schema,Document} from "mongoose";
+import * as _ from 'lodash';
+import {Model, Mongoose} from "mongoose";
 import {dbClean, dbConnect} from "../common/Mongoose";
-import {
-  ModelInterface,
-  ModelInterfaceRequest,
-  ModelInterfaceResponse,
-  SimpleModelInterface
-} from "../../ModelInterface";
-import RESTInterfaceHandler from "../../RESTInterfaceHandler";
+import {ModelInterface, ModelInterfaceRequestMethods, SimpleModelInterface} from "../../ModelInterface";
+import RESTInterfaceHandler, {HTTPMethodNotAllowedError, OperationToHTTPMethod} from "../../RESTInterfaceHandler";
 import fetch from 'node-fetch';
-
-import getPort from 'get-port';
 import * as HTTP from "http";
-import * as _ from "lodash";
-import {IncomingMessage} from "http";
-import qs from 'querystring';
-import EncodeTools, { MimeTypesSerializationFormat } from '@etomon/encode-tools/lib/EncodeTools';
+import EncodeTools, {MimeTypesSerializationFormat} from '@etomon/encode-tools/lib/EncodeTools';
+import {toPojo} from "@thirdact/to-pojo";
+
+const getPort = require('get-port');
+const qs = require('query-string');
 
 describe('RESTInterfaceHandler', async function () {
   let definition: RandomSchemaInterface;
@@ -59,7 +56,7 @@ describe('RESTInterfaceHandler', async function () {
   }
 
   after(async function () {
-    await dbClean();
+    // await dbClean();
   });
 
   let srv:  HTTP.Server;
@@ -75,8 +72,15 @@ describe('RESTInterfaceHandler', async function () {
     [name:string]: any;
   }
 
-  async function wrapServer(before: (args: { resolve: () => void, reject: (err: Error) => void, [name: string]: any }) => Promise<void>, after:  (caddie: Caddie) => Promise<void>) {
-      const [[req, res]] = (await Promise.all([
+  async function wrapServer(before: (args: { [name: string]: any }) => Promise<void>, after:  (caddie: Caddie) => Promise<void>) {
+      (await Promise.all([
+        (async () => {
+          await new Promise<void>((resolve, reject) => {
+            srv.listen(port, () => {
+              before.call(this).then(resolve).catch(reject);
+            })
+          });
+        })(),
         new Promise((resolve, reject) => {
           srv.once('request', (req, res) => {
             resolve([req,res]);
@@ -84,20 +88,10 @@ describe('RESTInterfaceHandler', async function () {
           srv.once('error', (err) => {
             reject(err);
           });
-        }),
-        (async () => {
-          await new Promise<void>((resolve, reject) => {
-            srv.listen(port, () => {
-              resolve();
-            })
-
-            before.call(this, { resolve, reject });
-          });
-        })()
-      ])) as [HTTP.IncomingMessage, HTTP.ServerResponse][];
-      await after.call(this, {
-        req, res
-      });
+        }).then(([req, res]) => after.call(this, {
+          req, res
+        }))
+      ]));
   }
 
   describe('interfaceRequestFromHttpRequest', async function () {
@@ -119,10 +113,10 @@ describe('RESTInterfaceHandler', async function () {
           [k]: v
         }
       };
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         fetch(baseUrl + '/', BindRandomSerialize({
           method: 'POST'
-        }, body)).catch((err) => reject(err));
+        }, body)).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
@@ -145,10 +139,10 @@ describe('RESTInterfaceHandler', async function () {
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         fetch(baseUrl + `/?${qs.stringify(body.query)}`, BindRandomSerialize({
           method: 'GET'
-        })).catch((err) => reject(err));
+        })).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
@@ -165,23 +159,25 @@ describe('RESTInterfaceHandler', async function () {
 
       body = {
         query: {
-          _id: doc._id.toString()
+          query: {
+            _id: doc._id.toString()
+          }
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         fetch(baseUrl + `/${doc._id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
           }
           // ,body: JSON.stringify(body)
-        }).catch((err) => reject(err));
+        }).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
         assert.ok(resp);
-        assert.equal(resp.method, 'findById');
+        assert.equal(resp.method, 'findOne');
         assert.deepEqual(resp.body, body);
       });
     });
@@ -200,11 +196,11 @@ describe('RESTInterfaceHandler', async function () {
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const { buf, mimeType } = RandomSerialize(body);
         fetch(baseUrl + `/${doc._id}`, BindRandomSerialize({
           method: 'PUT'
-        }, body)).catch((err) => reject(err));
+        }, body)).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
@@ -213,7 +209,7 @@ describe('RESTInterfaceHandler', async function () {
         assert.deepEqual(resp.body, {
           ...body,
           query: {
-            _id: doc._id.toString()
+            query: { _id: doc._id.toString() }
           }
         });
       });
@@ -235,10 +231,10 @@ describe('RESTInterfaceHandler', async function () {
         ]
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         fetch(baseUrl + `/${doc._id}`, BindRandomSerialize({
           method: 'PATCH'
-        }, body)).catch((err) => reject(err));
+        }, body)).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
@@ -247,7 +243,7 @@ describe('RESTInterfaceHandler', async function () {
         assert.deepEqual(resp.body, {
           ...body,
           query: {
-            _id: doc._id.toString()
+            query: { _id: doc._id.toString() }
           }
         });
       });
@@ -261,10 +257,10 @@ describe('RESTInterfaceHandler', async function () {
 
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         fetch(baseUrl + `/${doc._id}`,BindRandomSerialize( {
           method: 'DELETE'
-        })).catch((err) => reject(err));
+        })).catch((err) => {});
       }, async ({ req, ers }) => {
         resp = await restInterfaceHandler.interfaceRequestFromHttpRequest(req as HTTP.IncomingMessage);
 
@@ -273,7 +269,7 @@ describe('RESTInterfaceHandler', async function () {
         assert.deepEqual(resp.body, {
           ...body,
           query: {
-            _id: doc._id.toString()
+            query: { _id: doc._id.toString() }
           }
         });
       });
@@ -296,7 +292,7 @@ describe('RESTInterfaceHandler', async function () {
           [k]: v
         }
       };
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const resp =  await fetch(baseUrl + '/', BindRandomSerialize({
           method: 'POST'
         },body));
@@ -325,13 +321,13 @@ describe('RESTInterfaceHandler', async function () {
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const b = BindRandomSerialize({
           method: 'GET'
         });
         const resp = await  fetch(baseUrl + `/?${qs.stringify(body.query)}`, b);
         const mimeType = b.headers['Accept'];
-        const format = MimeTypesSerializationFormat.get(b.headers[mimeType]);
+        const format = MimeTypesSerializationFormat.get(mimeType);
 
         assert.equal(resp.status, 200);
         assert.equal(resp.headers.get('content-type'), mimeType);
@@ -345,6 +341,88 @@ describe('RESTInterfaceHandler', async function () {
       });
     });
 
+    it('should return a count of records', async function () {
+      this.timeout(10e3);
+
+      const chance = makeChance();
+      const count = chance.integer({ min: 0, max: 25 });
+      for (let i = 0; i < count; i++) {
+        const doc = new model();
+        await doc.save();
+      }
+
+      await wrapServer(async () => {
+        const resp = await  fetch(baseUrl + `/`, BindRandomSerialize({
+          method: 'HEAD'
+        }));
+
+        assert.equal(resp.status, 200);
+        assert.equal(resp.headers.get('x-count'), String(count));
+      }, async ({ req, res }) => {
+        await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
+      });
+    });
+
+    it('if a single record is returned, and timestamps are enabled, should send timestamp as last modified', async function () {
+      // this.timeout(10e3);
+      this.timeout(0);
+
+      const doc = new model();
+      await doc.save();
+
+      let resp: any;
+
+      await wrapServer(async () => {
+        const resp = await  fetch(baseUrl + `/${doc._id.toString()}`, BindRandomSerialize({
+          method: 'HEAD'
+        }));
+
+        assert.equal(resp.status, 200);
+        assert.equal(resp.headers.get('last-modified'), doc.updatedAt.toISOString());
+      }, async ({ req, res }) => {
+        await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
+      });
+    });
+
+    it('if a single record is returned, and timestamps are enabled, and If-Modified-Since as set, should only return data if the timestamp on the document is ahead of the one provided', async function () {
+      this.timeout(10e3);
+
+      const doc = new model();
+      await doc.save();
+      const chance = makeChance();
+
+      await wrapServer(async () => {
+        const resp = await fetch(baseUrl + `/${doc._id.toString()}`, BindRandomSerialize({
+          method: 'HEAD',
+          headers: {
+            'If-Modified-Since': (new Date(chance.date({
+              max: doc.updatedAt
+            }))).toISOString()
+          }
+        }));
+
+        assert.equal(resp.status, 304);
+      }, async ({ req, res }) => {
+        await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
+      });
+    });
+
+
+    it('should return 404 if no result can be found', async function () {
+      this.timeout(10e3);
+
+      await wrapServer(async () => {
+        const b = BindRandomSerialize({
+          method: 'GET'
+        });
+        const resp = await fetch(baseUrl + `/${(new (require('mongodb').ObjectId)()).toString()}`, b);
+        assert.equal(resp.status, 404);
+
+      }, async ({ req, res }) => {
+        await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
+      });
+    });
+
     it('should return a single record matching a query on a  random field, with the query as a body', async function () {
       this.timeout(10e3)
       const doc = new model();
@@ -354,17 +432,17 @@ describe('RESTInterfaceHandler', async function () {
 
       body = {
         query: {
-          [k]: doc[k]
+          query: { [k]: doc[k] }
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const b = BindRandomSerialize({
           method: 'GET'
         });
-        const resp = await  fetch(baseUrl + `/${doc._id}`, b);
+        const resp = await  fetch(baseUrl + `/${doc._id.toString()}`, b);
         const mimeType = b.headers['Accept'];
-        const format = MimeTypesSerializationFormat.get(b.headers[mimeType]);
+        const format = MimeTypesSerializationFormat.get(mimeType);
 
         assert.equal(resp.status, 200);
         assert.equal(resp.headers.get('content-type'), mimeType);
@@ -379,6 +457,31 @@ describe('RESTInterfaceHandler', async function () {
       });
     });
 
+    it('should reject disallowed operations', async function () {
+      this.timeout(10e3);
+      const chance = makeChance();
+      const [ [method, httpMethod], [method2, httpMethod2] ] = chance.shuffle(
+        _.uniq(Array.from(OperationToHTTPMethod.values())).map((k) =>
+          chance.shuffle(Array.from(OperationToHTTPMethod.entries())).filter(f => f[1] === k)[0]
+        )
+      );
+
+      restInterfaceHandler.options = {
+        ...restInterfaceHandler.options,
+        parseOptions: { allowedMethods: [ method ] }
+      };
+
+      await wrapServer(async () => {
+        const resp = await  fetch(baseUrl + `/`, BindRandomSerialize({
+          method: httpMethod2
+        }));
+
+        assert.equal(resp.status, 405);
+        assert.equal(resp.headers.get('allow'), httpMethod);
+      }, async ({ req, res }) => {
+        await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
+      });
+    });
 
     it('should update an existing record', async function () {
       this.timeout(10e3)
@@ -393,18 +496,20 @@ describe('RESTInterfaceHandler', async function () {
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const resp = await  fetch(baseUrl + `/${doc._id}`, BindRandomSerialize({
           method: 'PUT'
         }, body));
 
         assert.equal(resp.status, 204);
-        const newDoc = await model.findById(doc._id);
-
-        assert.equal( newDoc.toJSON()[ k ], v);
       }, async ({ req, res }) => {
         await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
       });
+
+      const newDoc = await model.findById(doc._id.toString());
+
+      // console.log(doc._id.toString())
+      assert.equal((toPojo(newDoc.toJSON()) as any)[ k ], v);
     });
     it('should patch an existing record', async function () {
       this.timeout(10e3)
@@ -419,7 +524,7 @@ describe('RESTInterfaceHandler', async function () {
         }
       };
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const resp = await  fetch(baseUrl + `/${doc._id}`, BindRandomSerialize({
           method: 'PATCH'
         }, {
@@ -433,12 +538,13 @@ describe('RESTInterfaceHandler', async function () {
         }));
 
         assert.equal(resp.status, 204);
-        const newDoc = await model.findById(doc._id);
 
-        assert.equal( newDoc.toJSON()[ k ], v);
       }, async ({ req, res }) => {
         await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
       });
+      const newDoc = await model.findById(doc._id.toString());
+
+      assert.equal((toPojo(newDoc.toJSON()) as any)[ k ], v);
     });
     it('should delete an existing record', async function () {
       this.timeout(10e3)
@@ -447,18 +553,19 @@ describe('RESTInterfaceHandler', async function () {
 
       const [k,v] = GenerateRandomKeyValuePair(definition, Object.keys(doc.toJSON()));
 
-      await wrapServer(async ({  resolve, reject }) => {
+      await wrapServer(async () => {
         const resp = await  fetch(baseUrl + `/${doc._id}`, BindRandomSerialize({
           method: 'DELETE'
         }));
 
         assert.equal(resp.status, 204);
-        const newDoc = await model.findById(doc._id);
 
-        assert.isNull(newDoc);
       }, async ({ req, res }) => {
         await restInterfaceHandler.execute(req as HTTP.IncomingMessage, res);
       });
+      const newDoc = await model.findById(doc._id);
+
+      assert.isNull(newDoc);
     });
   });
 });

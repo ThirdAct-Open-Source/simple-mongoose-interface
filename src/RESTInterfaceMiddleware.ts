@@ -31,4 +31,5 @@ export function RESTInterfaceMiddleware<T>(modelInterface: RESTInterfaceHandler<
   return RESTInterfaceMiddlewareHandler.bind(void(0), modelInterface);
 }
 
+
 export default RESTInterfaceMiddleware;

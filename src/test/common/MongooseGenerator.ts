@@ -1,6 +1,6 @@
 import {Model, ObjectId, Document, Schema, Mongoose} from 'mongoose';
 import {Chance} from 'chance';
-import _ from 'lodash';
+import * as _ from 'lodash';
 import {ModelInterfaceError,IsModelInterfaceError} from "../../ModelInterface";
 import EncodeTools, {SerializationFormat, SerializationFormatMimeTypes} from "@etomon/encode-tools/lib/EncodeTools";
 import {EncodeToolsAuto} from "@etomon/encode-tools";
@@ -83,7 +83,7 @@ export function GenerateRandomDefinition(): RandomSchemaInterface {
 }
 
 export function GenerateRandomMongooseSchema(definition?: RandomSchemaInterface): Schema<RandomSchemaInterface> {
-  return new Schema<RandomSchemaInterface>(definition || GenerateRandomDefinition());
+  return new Schema<RandomSchemaInterface>(definition || GenerateRandomDefinition(), { timestamps: true });
 }
 
 export function GenerateRandomMongooseModel(mongoose: Mongoose, definition?: RandomSchemaInterface): Model<RandomSchemaInterface> {

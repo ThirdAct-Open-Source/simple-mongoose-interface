@@ -121,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#createQuery" class="tsd-kind-icon">create<wbr>Query</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="ModelInterface.ModelInterface-1.html#ensureQuery" class="tsd-kind-icon">ensure<wbr>Query</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#execute" class="tsd-kind-icon">execute</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#find" class="tsd-kind-icon">find</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ModelInterface.ModelInterface-1.html#findById" class="tsd-kind-icon">find<wbr>ById</a></li>
@@ -148,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L344">src/ModelInterface.ts:344</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L344">src/ModelInterface.ts:344</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -200,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L351">src/ModelInterface.ts:351</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L351">src/ModelInterface.ts:351</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -225,7 +226,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L520">src/ModelInterface.ts:520</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L530">src/ModelInterface.ts:530</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,7 +257,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L529">src/ModelInterface.ts:529</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L540">src/ModelInterface.ts:540</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -278,13 +279,13 @@
 					<a name="createQuery" class="tsd-anchor"></a>
 					<h3>create<wbr>Query</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Query<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Query<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L479">src/ModelInterface.ts:479</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L486">src/ModelInterface.ts:486</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -301,7 +302,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EnforceDocument</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -315,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L588">src/ModelInterface.ts:588</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L614">src/ModelInterface.ts:614</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -336,6 +337,29 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="ensureQuery" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> ensure<wbr>Query</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">ensure<wbr>Query<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L475">src/ModelInterface.ts:475</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>query: <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/ModelInterface.html#Query" class="tsd-signature-type" data-tsd-kind="Type alias">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="execute" class="tsd-anchor"></a>
 					<h3>execute</h3>
@@ -346,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L379">src/ModelInterface.ts:379</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L379">src/ModelInterface.ts:379</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -378,7 +402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L495">src/ModelInterface.ts:495</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L503">src/ModelInterface.ts:503</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -409,7 +433,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L512">src/ModelInterface.ts:512</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L522">src/ModelInterface.ts:522</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -437,7 +461,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L504">src/ModelInterface.ts:504</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L513">src/ModelInterface.ts:513</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -468,7 +492,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L556">src/ModelInterface.ts:556</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L580">src/ModelInterface.ts:580</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -523,7 +547,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L569">src/ModelInterface.ts:569</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L594">src/ModelInterface.ts:594</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -560,7 +584,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L471">src/ModelInterface.ts:471</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L471">src/ModelInterface.ts:471</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -602,7 +626,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L539">src/ModelInterface.ts:539</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L550">src/ModelInterface.ts:550</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -636,13 +660,13 @@
 					<a name="wrapError" class="tsd-anchor"></a>
 					<h3>wrap<wbr>Error</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">wrap<wbr>Error<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a></li>
+						<li class="tsd-signature tsd-kind-icon">wrap<wbr>Error<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>httpCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>innerError<span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">; </span>isModelInterfaceError<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>stack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L359">src/ModelInterface.ts:359</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L359">src/ModelInterface.ts:359</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -661,7 +685,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>httpCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>innerError<span class="tsd-signature-symbol">: </span><a href="../interfaces/ModelInterface.ModelInterfaceError.html" class="tsd-signature-type" data-tsd-kind="Interface">ModelInterfaceError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">; </span>isModelInterfaceError<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>stack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -675,7 +699,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/ModelInterface.ts#L453">src/ModelInterface.ts:453</a></li>
+									<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/ModelInterface.ts#L453">src/ModelInterface.ts:453</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -777,6 +801,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="ModelInterface.ModelInterface-1.html#delete" class="tsd-kind-icon">delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="ModelInterface.ModelInterface-1.html#ensureQuery" class="tsd-kind-icon">ensure<wbr>Query</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="ModelInterface.ModelInterface-1.html#execute" class="tsd-kind-icon">execute</a>

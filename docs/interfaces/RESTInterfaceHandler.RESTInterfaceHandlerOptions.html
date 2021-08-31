@@ -84,6 +84,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#encoder" class="tsd-kind-icon">encoder</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#parseOptions" class="tsd-kind-icon">parse<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#queryStringOptions" class="tsd-kind-icon">query<wbr>String<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#rawBodyOptions" class="tsd-kind-icon">raw<wbr>Body<wbr>Options</a></li>
 							</ul>
@@ -99,7 +100,7 @@
 					<div class="tsd-signature tsd-kind-icon">encoder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEncodeTools</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/RESTInterfaceHandler.ts#L29">src/RESTInterfaceHandler.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/RESTInterfaceHandler.ts#L115">src/RESTInterfaceHandler.ts:115</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -112,12 +113,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="parseOptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parse<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">parse<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="RESTInterfaceHandler.RESTInterfaceParserOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTInterfaceParserOptions</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/RESTInterfaceHandler.ts#L131">src/RESTInterfaceHandler.ts:131</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Options to pass to the parser</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="queryStringOptions" class="tsd-anchor"></a>
 					<h3>query<wbr>String<wbr>Options</h3>
 					<div class="tsd-signature tsd-kind-icon">query<wbr>String<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ParseOptions</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/RESTInterfaceHandler.ts#L41">src/RESTInterfaceHandler.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/RESTInterfaceHandler.ts#L127">src/RESTInterfaceHandler.ts:127</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Body<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Options</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/84829d9/src/RESTInterfaceHandler.ts#L34">src/RESTInterfaceHandler.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/ThirdAct-Open-Source/simple-mongoose-interface/blob/213609b/src/RESTInterfaceHandler.ts#L120">src/RESTInterfaceHandler.ts:120</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -175,10 +191,16 @@
 						<a href="../modules/RESTInterfaceHandler.html#default" class="tsd-kind-icon">default</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/RESTInterfaceHandler.HTTPMethodNotAllowedError.html" class="tsd-kind-icon">HTTPMethod<wbr>Not<wbr>Allowed<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/RESTInterfaceHandler.InvalidHTTPMethodError.html" class="tsd-kind-icon">InvalidHTTPMethod<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../classes/RESTInterfaceHandler.RESTInterfaceHandler-1.html" class="tsd-kind-icon">RESTInterface<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="RESTInterfaceHandler.HTTPError.html" class="tsd-kind-icon">HTTPError</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -187,6 +209,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#encoder" class="tsd-kind-icon">encoder</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#parseOptions" class="tsd-kind-icon">parse<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="RESTInterfaceHandler.RESTInterfaceHandlerOptions.html#queryStringOptions" class="tsd-kind-icon">query<wbr>String<wbr>Options</a>
@@ -198,8 +223,20 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="RESTInterfaceHandler.RESTInterfaceParserOptions.html" class="tsd-kind-icon">RESTInterface<wbr>Parser<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="../modules/RESTInterfaceHandler.html#DEFAULT_PARSE_OPTIONS" class="tsd-kind-icon">DEFAULT_<wbr>PARSE_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/RESTInterfaceHandler.html#DEFAULT_REST_INTERFACE_OPTIONS" class="tsd-kind-icon">DEFAULT_<wbr>REST_<wbr>INTERFACE_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/RESTInterfaceHandler.html#IsRESTModelInterfaceHandler" class="tsd-kind-icon">IsRESTModel<wbr>Interface<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/RESTInterfaceHandler.html#OperationToHTTPMethod" class="tsd-kind-icon">Operation<wbr>ToHTTPMethod</a>
 					</li>
 				</ul>
 			</nav>

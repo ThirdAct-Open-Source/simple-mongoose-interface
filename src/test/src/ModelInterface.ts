@@ -251,13 +251,13 @@ describe('ModelInterface', async function () {
 
         assert.deepEqual(
           interfaceResult.map((d) =>toPojo(d.toJSON())),
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         assert.deepEqual(
           interfaceResult.map((d) =>toPojo(d.toJSON())),
-          result.map(d =>toPojo(d.toJSON())),
+          result.map((d: any) =>toPojo(d.toJSON())),
           'query results did not match the results from the interface'
         );
       });
@@ -285,13 +285,13 @@ describe('ModelInterface', async function () {
 
         assert.deepEqual(
           [interfaceResult].map((d) =>toPojo(d.toJSON())),
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         assert.deepEqual(
           [interfaceResult].map((d) =>toPojo(d.toJSON())),
-          result.map(d =>toPojo(d.toJSON())),
+          result.map((d: any) =>toPojo(d.toJSON())),
           'query results did not match the results from the interface'
         );
       });
@@ -316,13 +316,13 @@ describe('ModelInterface', async function () {
 
         assert.deepEqual(
           [interfaceResult].map((d) =>toPojo(d.toJSON())),
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         assert.deepEqual(
           [interfaceResult].map((d) =>toPojo(d.toJSON())),
-          result.map(d =>toPojo(d.toJSON())),
+          result.map((d: any) =>toPojo(d.toJSON())),
           'query results did not match the results from the interface'
         );
       });
@@ -404,7 +404,7 @@ describe('ModelInterface', async function () {
         await modelInterface.update(q, delta, false);
 
         const mDocs = await mQ.exec();
-        const fields = _.uniq(mDocs.map(d => d[fieldToChange]));
+        const fields = _.uniq([].concat(mDocs).map((d: any) => d[fieldToChange]));
         assert.equal(fields.length, 1);
         const [mValue] = fields;
 
@@ -432,7 +432,7 @@ describe('ModelInterface', async function () {
         await modelInterface.update(q, delta, false);
 
         const mDocs = await mQ.exec();
-        const fields = mDocs.map(d => d[fieldToChange]);
+        const fields = [].concat(mDocs).map((d: any) => d[fieldToChange]);
         const a = _.uniq(fields).filter(x => typeof(x) !== 'undefined');
 
         assert.equal(a.length, 1);
@@ -469,7 +469,7 @@ describe('ModelInterface', async function () {
         ]);
 
         const mDocs = await mQ.exec();
-        const fields = _.uniq(mDocs.map(d => d[fieldToChange]));
+        const fields = _.uniq([].concat(mDocs).map((d: any) => d[fieldToChange]));
         assert.equal(fields.length, 1);
         const [mValue] = fields;
 
@@ -548,13 +548,13 @@ describe('SimpleModelInterface', async function () {
 
         assert.deepEqual(
           interfaceResult,
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         assert.deepEqual(
           interfaceResult,
-          result.map(d =>toPojo(d.toJSON())),
+          result.map((d: any) =>toPojo(d.toJSON())),
           'query results did not match the results from the interface'
         );
       });
@@ -582,13 +582,13 @@ describe('SimpleModelInterface', async function () {
 
         assert.deepEqual(
           [interfaceResult],
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         // assert.deepEqual(
         //   [interfaceResult],
-        //   result.map(d =>toPojo(d.toJSON())),
+        //   result.map((d: any) =>toPojo(d.toJSON())),
         //   'query results did not match the results from the interface'
         // );
       });
@@ -613,13 +613,13 @@ describe('SimpleModelInterface', async function () {
 
         assert.deepEqual(
           [interfaceResult],
-          mongooseResult.map(d =>toPojo(d.toJSON())),
+          [].concat(mongooseResult).map((d: any) =>toPojo(d.toJSON())),
           'interface results did not match the results from mongo'
         );
 
         assert.deepEqual(
           [interfaceResult],
-          result.map(d =>toPojo(d.toJSON())),
+          result.map((d: any) =>toPojo(d.toJSON())),
           'query results did not match the results from the interface'
         );
       });
@@ -702,7 +702,7 @@ describe('SimpleModelInterface', async function () {
         await modelInterface.update(q, delta, false);
 
         const mDocs = await mQ.exec();
-        const fields = _.uniq(mDocs.map(d => d[fieldToChange]));
+        const fields = _.uniq([].concat(mDocs).map((d: any) => d[fieldToChange]));
         assert.equal(fields.length, 1);
         const [mValue] = fields;
 
@@ -735,7 +735,7 @@ describe('SimpleModelInterface', async function () {
         await modelInterface.update(q, delta, false);
 
         const mDocs = await mQ.exec();
-        const fields = mDocs.map(d => d[fieldToChange]);
+        const fields = [].concat(mDocs).map((d: any) => d[fieldToChange]);
         const a = _.uniq(fields).filter(x => typeof(x) !== 'undefined');
 
         assert.equal(a.length, 1);
@@ -775,7 +775,7 @@ describe('SimpleModelInterface', async function () {
         ]);
 
         const mDocs = await mQ.exec();
-        const fields = _.uniq(mDocs.map(d => d[fieldToChange]));
+        const fields = _.uniq([].concat(mDocs).map((d: any) => d[fieldToChange]));
         assert.equal(fields.length, 1);
         const [mValue] = fields;
 
