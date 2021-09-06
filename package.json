@@ -21,7 +21,7 @@
     "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
     "license": "LGPL-3.0",
     "dependencies": {
-        "@etomon/encode-tools": "^2.7.0",
+        "@etomon/encode-tools": "^2.7.1",
         "@thirdact/to-pojo": "^1.0.1",
         "content-type": "^1.0.4",
         "dotenv": "^10.0.0",
