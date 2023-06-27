@@ -14,7 +14,7 @@ import {ModelInterface, ModelInterfaceRequestMethods, SimpleModelInterface} from
 import RESTInterfaceHandler, {HTTPMethodNotAllowedError, OperationToHTTPMethod} from "../../RESTInterfaceHandler";
 import fetch from 'node-fetch';
 import * as HTTP from "http";
-import EncodeTools, {MimeTypesSerializationFormat} from '@etomon/encode-tools/lib/EncodeTools';
+import EncodeTools, {MimeTypesSerializationFormat} from '@znetstar/encode-tools/lib/EncodeTools';
 import {toPojo} from "@thirdact/to-pojo";
 
 const getPort = require('get-port');

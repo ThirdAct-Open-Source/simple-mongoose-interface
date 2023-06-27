@@ -1,5 +1,5 @@
 import {IncomingMessage, ServerResponse} from "http";
-import {EncodeToolsAuto, IEncodeTools} from "@etomon/encode-tools";
+import {EncodeTools as EncodeToolsAuto, IEncodeTools} from "@znetstar/encode-tools";
 import * as _ from 'lodash';
 import {URL} from 'url';
 import {
@@ -11,7 +11,7 @@ import {
 } from "./ModelInterface";
 import getRawBody from 'raw-body';
 import qs, {ParseOptions} from 'query-string';
-import {ExtractedSerializationFormatContentType} from "@etomon/encode-tools/lib/IEncodeTools";
+import {ExtractedSerializationFormatContentType} from "@znetstar/encode-tools/lib/IEncodeTools";
 
 export const IsRESTModelInterfaceHandler = Symbol('AmARESTModelInterfaceHandler');
 
