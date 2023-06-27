@@ -28,11 +28,6 @@
             "name": "Zachary R.T. Boyd",
             "email": "zachary@zacharyboyd.nyc",
             "url": "https://zacharyboyd.nyc"
-        },
-        {
-            "name": "Etomon Team",
-            "email": "open-source@etomon.com",
-            "url": "https://etomon.com"
         }
     ],
     "license": "LGPL-3.0",
