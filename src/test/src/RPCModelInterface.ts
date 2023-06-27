@@ -20,7 +20,7 @@ import {Client, Server, TCPTransport, Transport} from 'multi-rpc';
 type Query = QueryBase<RandomSchemaInterface>;
 import { EncodeToolsSerializer } from 'multi-rpc-common/lib/EncodeToolsSerializer';
 import {ServerSideTransport} from "multi-rpc-common";
-import EncodeTools, {SerializationFormat} from "@etomon/encode-tools/lib/EncodeTools";
+import EncodeTools, {SerializationFormat} from "@znetstar/encode-tools/lib/EncodeTools";
 const getPort = require('get-port');
 import RPCInterface from "../../RPCInterface";
 import { toPojo } from '@thirdact/to-pojo';

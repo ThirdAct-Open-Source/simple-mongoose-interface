@@ -2,8 +2,7 @@ import {Model, ObjectId, Document, Schema, Mongoose} from 'mongoose';
 import {Chance} from 'chance';
 import * as _ from 'lodash';
 import {ModelInterfaceError,IsModelInterfaceError} from "../../ModelInterface";
-import EncodeTools, {SerializationFormat, SerializationFormatMimeTypes} from "@etomon/encode-tools/lib/EncodeTools";
-import {EncodeToolsAuto} from "@etomon/encode-tools";
+import EncodeTools, {SerializationFormat, SerializationFormatMimeTypes} from "@znetstar/encode-tools/lib/EncodeTools";
 import { RequestInfo, Request } from 'node-fetch';
 
 const chance = makeChance();
